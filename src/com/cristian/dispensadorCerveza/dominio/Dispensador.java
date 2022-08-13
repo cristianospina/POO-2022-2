@@ -8,9 +8,10 @@ public class Dispensador {
     public double temperatura;
     public Cerveza cervezaActual;
 
-    public Dispensador(String marca) {
+    public Dispensador(String marca, double capacidad) {
         this.marca = marca;
         this.capacidad = capacidad;
+        this.temperatura = -1;
     }
 
     public boolean servir(double cantidadAServir) {
@@ -40,7 +41,7 @@ public class Dispensador {
         return false;
     }
 
-    public void camviarCerveza(Cerveza nuevaCerveza){
+    public void cambiarCerveza(Cerveza nuevaCerveza){
         this.vaciar();;
         this.cervezaActual = nuevaCerveza;
         this.llenar();
