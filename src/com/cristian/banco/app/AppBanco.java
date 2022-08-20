@@ -16,6 +16,7 @@ public class AppBanco {
         cuentaAlfredo.retirar(500000);
         cuentaAlfredo.transferir(cuentaViviana, 450000);
 
+
         System.out.println(cuentaAlfredo.consultarSaldoActual());
         System.out.println(cuentaViviana.consultarSaldoActual());
     }

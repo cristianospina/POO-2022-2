@@ -13,9 +13,11 @@ public class AppDispensador {
         dispensadora.cambiarCerveza(clubNegra);
         boolean sirvioBien = dispensadora.servir(250);
 
+        dispensadora.getCervezaActual().setTempRecomendada(-5);
+
         if (sirvioBien) {
-            System.out.println("Se sirvió " + dispensadora.cervezaActual.nombre + " a "
-                    + dispensadora.temperatura + "°c correctamente. Queda " + dispensadora.cantidadActual);
+            System.out.println("Se sirvió " + dispensadora.getCervezaActual().getMarca() + " a "
+                    + dispensadora.getTemperatura() + "°c correctamente. Queda " + dispensadora.getCantidadActual());
         } else {
             System.out.println("No se pudo servir cerveza.");
         }
@@ -24,8 +26,8 @@ public class AppDispensador {
         boolean sirvioBienPilsen = dispensadora.servir(340);
 
         if (sirvioBienPilsen) {
-            System.out.println("Se sirvió " + dispensadora.cervezaActual.nombre + " a "
-                    + dispensadora.temperatura + "°c correctamente. Queda " + dispensadora.cantidadActual);
+            System.out.println("Se sirvió " + dispensadora.getCervezaActual().getNombre() + " a "
+                    + dispensadora.getTemperatura() + "°c correctamente. Queda " + dispensadora.getCantidadActual());
         } else {
             System.out.println("No se pudo servir cerveza.");
         }

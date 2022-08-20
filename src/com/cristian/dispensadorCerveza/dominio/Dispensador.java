@@ -2,11 +2,11 @@ package com.cristian.dispensadorCerveza.dominio;
 
 public class Dispensador {
 
-    public String marca;
-    public double capacidad;
-    public double cantidadActual;
-    public double temperatura;
-    public Cerveza cervezaActual;
+    private String marca;
+    private double capacidad;
+    private double cantidadActual;
+    private double temperatura;
+    private Cerveza cervezaActual;
 
     public Dispensador(String marca, double capacidad) {
         this.marca = marca;
@@ -49,11 +49,33 @@ public class Dispensador {
 
     public void llenar() {
         this.cantidadActual = this.capacidad;
-        System.out.println("El dispensador se llenó con " + this.cervezaActual.marca);
+        System.out.println("El dispensador se llenó con " + this.cervezaActual.getMarca());
     }
 
     public void vaciar() {
         this.cantidadActual = 0;
         System.out.println("El dispensador se vació con exitosamente");
     }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public double getCapacidad() {
+        return capacidad;
+    }
+
+    public double getCantidadActual() {
+        return cantidadActual;
+    }
+
+    public double getTemperatura() {
+        return temperatura;
+    }
+
+    public Cerveza getCervezaActual() {
+        return cervezaActual;
+    }
+
+
 }
