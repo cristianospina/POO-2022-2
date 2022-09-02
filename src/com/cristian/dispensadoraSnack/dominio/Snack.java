@@ -1,7 +1,6 @@
 package com.cristian.dispensadoraSnack.dominio;
 
 public class Snack {
-
     private String nombre;
     private String codigo;
     private long valor;
@@ -17,23 +16,23 @@ public class Snack {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getCodigo() {
         return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
     }
 
     public long getValor() {
         return valor;
     }
 
-    public void setValor(long valor) {
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public void setValor() {
         this.valor = valor;
     }
 
@@ -44,4 +43,5 @@ public class Snack {
     public void setCantidad(long cantidad) {
         this.cantidad = cantidad;
     }
+
 }

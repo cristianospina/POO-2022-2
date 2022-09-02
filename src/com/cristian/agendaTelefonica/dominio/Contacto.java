@@ -2,12 +2,12 @@ package com.cristian.agendaTelefonica.dominio;
 
 public class Contacto {
     private String nombre;
-    private String apellidp;
+    private String apellido;
     private long celular;
 
     public Contacto(String nombre, String apellidp, long celular) {
         this.nombre = nombre;
-        this.apellidp = apellidp;
+        this.apellido = apellidp;
         this.celular = celular;
     }
 
@@ -19,12 +19,12 @@ public class Contacto {
         this.nombre = nombre;
     }
 
-    public String getApellidp() {
-        return apellidp;
+    public String getApellido() {
+        return apellido;
     }
 
     public void setApellidp(String apellidp) {
-        this.apellidp = apellidp;
+        this.apellido = apellidp;
     }
 
     public long getCelular() {
