@@ -8,18 +8,19 @@ public class DispensadorDeSnackApp {
 
         DispensadorDeSnack autoSnack = new DispensadorDeSnack();
 
-        autoSnack.agregar("Doritos", "1234", 2500);
-        autoSnack.agregar("Mani salado", "5678", 800);
-        autoSnack.agregar("Papa de limon", "9876", 2000);
-        autoSnack.agregar("Galletas oreo", "5432", 500);
-        autoSnack.agregar("Boliquesos", "7913", 2000);
-        autoSnack.agregar("Turron de coco", "1379", 300);
-        autoSnack.agregar("Chocorramo", "8246", 3000);
-        autoSnack.agregar("Trident", "6428", 200);
-        autoSnack.agregar("Mani dulce", "8213", 1000);
-        autoSnack.agregar("Papa de pollo", "1328", 2000);
-        autoSnack.agregar("Chocolatina", "6398", 500);
-        autoSnack.agregar("Lecherita", "7412", 600);
+        autoSnack.agregar("Doritos", "1234", 2500,6);
+        autoSnack.agregar("Mani salado", "5678", 800,6);
+        autoSnack.agregar("Papa de limon", "9876", 2000,6);
+        autoSnack.agregar("Galletas oreo", "5432", 500,6);
+        autoSnack.agregar("Boliquesos", "7913", 2000,6);
+        autoSnack.agregar("Turron de coco", "1379", 300,6);
+        autoSnack.agregar("Chocorramo", "8246", 3000,6);
+        autoSnack.agregar("Trident", "6428", 200,6);
+        autoSnack.agregar("Mani dulce", "8213", 1000,6);
+        autoSnack.agregar("Papa de pollo", "1328", 2000,6);
+        autoSnack.agregar("Chocolatina", "6398", 500,6);
+        autoSnack.agregar("Lecherita", "7412", 600,6);
+
 
         autoSnack.quitarSnack("6428");
         autoSnack.retirarSnackPorNombre("Trident");

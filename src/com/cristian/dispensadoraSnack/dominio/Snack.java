@@ -6,10 +6,11 @@ public class Snack {
     private long valor;
     private long cantidad;
 
-    public Snack(String nombre, String codigo, long valor) {
+    public Snack(String nombre, String codigo, long valor, long cantidad) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.valor = valor;
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {

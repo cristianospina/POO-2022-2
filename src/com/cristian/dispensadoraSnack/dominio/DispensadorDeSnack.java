@@ -14,8 +14,8 @@ public class DispensadorDeSnack {
         this.snacks = new ArrayList<>();
     }
 
-    public void agregar(String nombre, String codigo, long valor) {
-        Snack snackAAgregar = new Snack(nombre, codigo, valor);
+    public void agregar(String nombre, String codigo, long valor, long cantidad) {
+        Snack snackAAgregar = new Snack(nombre, codigo, valor,cantidad);
         if ((this.snacks.size() + 1) <= this.capacidad){
             this.snacks.add(snackAAgregar);
         } else {
