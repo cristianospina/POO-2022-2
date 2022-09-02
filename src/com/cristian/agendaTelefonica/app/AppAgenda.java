@@ -25,7 +25,7 @@ public class AppAgenda {
         miAgenda.editar(3216975530l, 3147254180l);
 
         System.out.println("\n------- Buscar un nuevo numero --------\n");
-        miAgenda.buscarPorCelularConFilter(3147254180l);
+        miAgenda.buscarPorCelular(3147254180l);
         System.out.println("\n---------------------------------------\n");
 
         /* if (c != null) {
