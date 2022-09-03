@@ -24,7 +24,7 @@ public class DispensadorDeSnackApp {
 
         autoSnack.quitarSnack("6398");
         autoSnack.retirarSnackPorNombre("Trident");
-        autoSnack.retirarSnackPorCodigo("5678");
+        autoSnack.retirarSnackPorCodigo("1234");
         autoSnack.snackOrdenadoPrecio();
         autoSnack.retirarSnackPorNombre("Papa de limon");
         System.out.println("Lista Por Cantidad");
