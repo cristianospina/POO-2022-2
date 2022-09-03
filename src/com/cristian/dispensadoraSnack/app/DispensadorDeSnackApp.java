@@ -22,7 +22,7 @@ public class DispensadorDeSnackApp {
         autoSnack.agregar("Lecherita", "7412", 600,6);
 
 
-        autoSnack.quitarSnack("6398");
+        autoSnack.quitarSnack("8246");
         autoSnack.retirarSnackPorNombre("Trident");
         autoSnack.retirarSnackPorCodigo("1234");
         autoSnack.snackOrdenadoPrecio();
