@@ -14,17 +14,21 @@ public class CentroComercial {
     
     public boolean abrirTienda(long codigo, String nombre){
         Tienda nuevaTienda = new Tienda(codigo, nombre);
-        if ((this.tienda.size() + 1 <= CAPACIDAD) && buscarTienda() == codigo){
+        if ((this.tienda.size() + 1 <= CAPACIDAD)){
             this.tienda.add(nuevaTienda);
         }
         return false;
     }
 
     public void cerrarTienda(long codigo){
-
+        Tienda tiendaACerrar = buscarTienda();
+        if (tiendaACerrar != null){
+            this.tienda.remove(tiendaACerrar);
+        }
     }
 
-    public Tienda buscarTienda(String nombre){
+
+    public Tienda buscarTienda(){
         Tienda buscarTiendasPorNombre = this.tienda.stream()
                 .filter(tienda -> tienda.getNombre() == nombre)
                 .findFirst().orElse(null);
@@ -49,10 +53,10 @@ public class CentroComercial {
 
     public List<Tienda> buscarTiendas(String categoria){
         List<Tienda> buscarTeindasPorCategoria = (List<Tienda>) this.tienda.stream()
-                .filter(tienda -> tienda.getClass() == categoria)
+                .filter(tienda -> tienda.getNombre() == categoria)
                 .findFirst().orElse(null);
         if (buscarTeindasPorCategoria != null){
-            return buscarTeindasPorCategoria
+            return buscarTeindasPorCategoria;
         }
 
         return null;
