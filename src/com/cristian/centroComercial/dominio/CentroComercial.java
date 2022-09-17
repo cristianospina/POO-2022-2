@@ -7,7 +7,6 @@ import java.util.List;
 public class CentroComercial {
     public static final byte CAPACIDAD = 100;
     private String nombre;
-    private String tiendasConMasDeDosCategoria;
     private List<Tienda> tienda;
 
     public CentroComercial (){this.tienda = new ArrayList<>();}
@@ -67,7 +66,9 @@ public class CentroComercial {
     }
 
     public String getTiendasConMasDeDosCategoria() {
-        return tiendasConMasDeDosCategoria;
+        Tienda listadeTiendas = (Tienda) this.tienda.stream()
+                .filter(tienda -> tienda.getCodigo() == tienda.getCodigo());
+        return getTiendasConMasDeDosCategoria();
     }
 
 }
