@@ -1,5 +1,7 @@
 package com.cristian.centroComercial.dominio;
 
+import java.util.ArrayList;
+
 public class Categoria {
     private String nombre;
 
