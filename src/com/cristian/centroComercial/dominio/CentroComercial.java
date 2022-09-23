@@ -20,14 +20,14 @@ public class CentroComercial {
     }
 
     public void cerrarTienda(long codigo){
-        Tienda tiendaACerrar = buscarTienda();
+        Tienda tiendaACerrar = buscarTienda(codigo);
         if (tiendaACerrar != null){
             this.tienda.remove(tiendaACerrar);
         }
+        System.out.println("la tienda" + tiendaACerrar + "no existe");
     }
 
-
-    public Tienda buscarTienda(){
+    public Tienda buscarTienda(String nombre){
         Tienda buscarTiendasPorNombre = this.tienda.stream()
                 .filter(tienda -> tienda.getNombre() == nombre)
                 .findFirst().orElse(null);
@@ -38,16 +38,11 @@ public class CentroComercial {
             return null;
         }
     }
+
     public Tienda buscarTienda(long codigo){
-        Tienda buscarTiendaPorCodigo = this.tienda.stream()
+        return  this.tienda.stream()
                 .filter(tienda -> tienda.getCodigo() == codigo)
                 .findFirst().orElse(null);
-        if (buscarTiendaPorCodigo != null){
-            return buscarTiendaPorCodigo;
-        }
-        else {
-            return null;
-        }
     }
 
     public List<Tienda> buscarTiendas(String categoria){
@@ -67,7 +62,7 @@ public class CentroComercial {
 
     public String getTiendasConMasDeDosCategoria() {
         Tienda listadeTiendas = (Tienda) this.tienda.stream()
-                .filter(tienda -> tienda.getCodigo() == tienda.getCodigo());
+                .filter(tienda -> tienda.getCategoria() == buscarTiendas());
         return getTiendasConMasDeDosCategoria();
     } //duda con este :(
 

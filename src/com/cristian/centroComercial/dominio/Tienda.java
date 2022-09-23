@@ -7,6 +7,14 @@ public class Tienda {
     private long codigo;
     private String nombre;
 
+    public List<Categoria> getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(List<Categoria> categoria) {
+        this.categoria = categoria;
+    }
+
     private List<Categoria> categoria;
 
     public Tienda (){this.categoria = new ArrayList<>();}
