@@ -62,8 +62,12 @@ public class CentroComercial {
 
     public String getTiendasConMasDeDosCategoria() {
         Tienda listadeTiendas = (Tienda) this.tienda.stream()
-                .filter(tienda -> tienda.getCategoria() == buscarTiendas());
-        return getTiendasConMasDeDosCategoria();
-    } //duda con este :(
+                .filter(tienda -> tienda.getCategoria() == buscarTienda("hola"))
+                .findFirst().orElse(null);
+        if (getTiendasConMasDeDosCategoria() != null) {
+            return getTiendasConMasDeDosCategoria();
+        }
+        return null;
+    }
 
 }
