@@ -61,10 +61,13 @@ public class AppGuayabita {
                     break;
                 case PUNTAJE:
                     if(jugadores.getJugador1() == null){
-                        jugadores.setDineroJugador1(500);
+                        jugadores.setDineroJugador1(jugadores.getDineroJugador1());
+                    }
+                    if (jugadores.getJugador2() == null){
+                        jugadores.setDineroJugador2(jugadores.getDineroJugador2());
                     }
                     JOptionPane.showMessageDialog(null,"                PUNTAJES \n "+ jugadores.getJugador1()+": "+jugadores.getGanadasjugador1()
-                            +"\n Pc: " +jugadores.getJugador2()+"\n Empates: "+ jugadores.getEmpate());
+                            +"\n" +jugadores.getJugador2()+": " +jugadores.getGanadasJugador2() +"\n Empates: "+ jugadores.getEmpate());
                     break;
                 case SALIR :
                     JOptionPane.showMessageDialog(null,"Gracias por Jugar, Hasta la Proxima!!!","Salida del Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
