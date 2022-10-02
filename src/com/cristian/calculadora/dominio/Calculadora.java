@@ -7,6 +7,7 @@ public class Calculadora {
         this.marca = marca;
     }
 
+
     public static float sumar(float n1, float n2) {
         return n1 + n2;
     }

@@ -2,17 +2,22 @@ package com.cristian.calculadora.app;
 
 import com.cristian.calculadora.dominio.Calculadora;
 
+import javax.swing.*;
+
 public class AppCalculadora {
     public static void main(String[] args) {
 
-        System.out.println(Calculadora.sumar(2.3f,8));
-        System.out.println(Calculadora.sumar(2,3,8));
-        System.out.println(Calculadora.restar(2.3f,3));
-        System.out.println(Calculadora.restar(2,3,8));
-        System.out.println(Calculadora.multi(2,3));
-        System.out.println(Calculadora.multi(3,2));
-        System.out.println(Calculadora.divi(8,0));
-        System.out.println(Calculadora.divi(2,3,2));
+        Calculadora calculadora = new Calculadora("casio");
+
+        int opcion = 5;
+        while (opcion == 5){
+            int opciones = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese una opcion: \n (1) Suma." + "\n (2) Resta. \n (3) Multiplicacion. \n (4) Division. \n (5) Salir. "));
+            switch (opciones){
+                case 1:
+
+            }
+        }
+
 
     }
 }
