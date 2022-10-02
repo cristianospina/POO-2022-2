@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class AppGuayabita {
     private static final ImageIcon ICONO = new ImageIcon(AppGuayabita.class.getResource("guayabita.png"));
-    public static final ImageIcon DADO1 = new ImageIcon(AppGuayabita.class.getResource("dado1.png"));
+    private static final ImageIcon DADO1 = new ImageIcon(AppGuayabita.class.getResource("dado1.png"));
     private static final ImageIcon DADO2 = new ImageIcon(AppGuayabita.class.getResource("dado2.png"));
     private static final ImageIcon DADO3 = new ImageIcon(AppGuayabita.class.getResource("dado3.png"));
     private static final ImageIcon DADO4 = new ImageIcon(AppGuayabita.class.getResource("dado4.png"));
