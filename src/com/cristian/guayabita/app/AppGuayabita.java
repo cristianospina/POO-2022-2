@@ -35,8 +35,6 @@ public class AppGuayabita {
                         String nombreJugador;
                         nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 1.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
                         jugadores.setJugador1(nombreJugador);
-                    }
-                    if (jugadores.getJugador1() != null){
                         double dinerJugador1;
                         dinerJugador1 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
                         jugadores.setDineroJugador1(dinerJugador1);
@@ -45,13 +43,10 @@ public class AppGuayabita {
                         String nombreJugador;
                         nombreJugador = (String) JOptionPane.showInputDialog(null,"Ingrese el Nombre del Jugador 2.","ingrese nombre",JOptionPane.PLAIN_MESSAGE,ICONO,null,null);
                         jugadores.setJugador2(nombreJugador);
-                    }
-                    if (jugadores.getJugador2() != null){
                         double dinerJugador2;
                         dinerJugador2 = Double.parseDouble((String) JOptionPane.showInputDialog(null,"Ingrese el Dinero del Jugador 1.","ingrese Dinero de Juego",JOptionPane.PLAIN_MESSAGE,ICONO,null,null));
                         jugadores.setDineroJugador2(dinerJugador2);
                     }
-                    break;
                 case INSTRUCCIONES:
                     JOptionPane.showMessageDialog(null,"INSTRUCCIONES\n\n Cada jugador debe colocar el valor del case en la mesa.\n"
                             + "Se efectuaran turnos, en los que el jugador lanza el dado,\n"
