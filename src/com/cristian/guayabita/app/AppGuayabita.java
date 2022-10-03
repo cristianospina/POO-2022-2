@@ -67,7 +67,7 @@ public class AppGuayabita {
                         jugadores.setDineroJugador2(jugadores.getDineroJugador2());
                     }
                     JOptionPane.showMessageDialog(null,"                PUNTAJES \n "+ jugadores.getJugador1()+": "+jugadores.getGanadasjugador1()
-                            +"\n" +jugadores.getJugador2()+": " +jugadores.getGanadasJugador2() +"\n Empates: "+ jugadores.getEmpate());
+                            +"\n" +jugadores.getJugador2()+": " +jugadores.getGanadasJugador2() +"\n Empates: "+ jugadores.getEmpate(),"Juego de la Guayabita",0,ICONO);
                     break;
                 case SALIR :
                     JOptionPane.showMessageDialog(null,"Gracias por Jugar, Hasta la Proxima!!!","Salida del Juego de la guayabita",JOptionPane.PLAIN_MESSAGE,ICONO);
@@ -79,7 +79,6 @@ public class AppGuayabita {
 
     public static String IngresarNombre(){
         String nombreJugador;
-
         do {
             nombreJugador = JOptionPane.showInputDialog(null,"Ingrese un nombre: ");
         }while(nombreJugador == null || nombreJugador.trim().isEmpty());
