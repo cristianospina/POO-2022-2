@@ -1,6 +1,5 @@
 package com.cristian.desafio1.guayabita.app;
 
-
 import com.cristian.desafio1.guayabita.dominio.Jugador;
 
 import javax.swing.*;
@@ -28,7 +27,6 @@ public class AppGuayabita  {
     Jugador jugadordos = new Jugador();
 
     public AppGuayabita() {
-
         this.pote = 0;
         this.dado = 0;
         this.turno = 0;
@@ -39,29 +37,22 @@ public class AppGuayabita  {
 
         do {
             opcion = JOptionPane.showOptionDialog(null,
-                    "---Bienvenido al juego de la Guayabita---" + "\n" + "�Que deseas hacer?", "guayabita",
+                    "---Bienvenido al juego de la Guayabita---" + "\n" + "¿Que deseas hacer?", "guayabita",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
-                   ICONO, new String[] { "Jugar", "Ver Instruciones" },
+                   ICONO, new String[] { "Jugar", "Ver Instruciones"},
                     null);
-
             if (opcion == 0) {
                     String nombre = (String) JOptionPane.showInputDialog(null, "Ingrese el nombre del jugador" ,
-                            "Nombre", JOptionPane.WARNING_MESSAGE,ICONO,
-                            null, null);
+                            "Nombre", JOptionPane.WARNING_MESSAGE,ICONO, null, null);
                 String pote1 = (String) (JOptionPane.showInputDialog(null, "Ingrese el pote de " + nombre, "Nombre",
-                        JOptionPane.WARNING_MESSAGE, ICONO, null,
-                        null));
-
+                        JOptionPane.WARNING_MESSAGE, ICONO, null, null));
                 jugadoruno.crearJugador(nombre);
                 jugadoruno.crearPote(pote1);
                 jugadores.add(jugadoruno);
                 String nombre2 = (String) JOptionPane.showInputDialog(null, "Ingrese el nombre del jugador" ,
-                        "Nombre", JOptionPane.WARNING_MESSAGE,ICONO,
-                        null, null);
+                        "Nombre", JOptionPane.WARNING_MESSAGE,ICONO, null, null);
                 String pote2 = (String) (JOptionPane.showInputDialog(null, "Ingrese el pote de " +nombre2, "Nombre",
-                        JOptionPane.WARNING_MESSAGE, ICONO, null,
-                        null));
-
+                        JOptionPane.WARNING_MESSAGE, ICONO, null, null));
                 jugadordos.crearJugador(nombre2);
                 jugadordos.crearPote(pote2);
                 jugadores.add(jugadordos);
@@ -84,7 +75,6 @@ public class AppGuayabita  {
     public void juego() {
 
         this.pote = 500;
-
         jugadores.get(0).setPoteJugador(jugadores.get(0).getPoteJugador() - 250);
         jugadores.get(1).setPoteJugador(jugadores.get(1).getPoteJugador() - 250);
 
@@ -93,16 +83,13 @@ public class AppGuayabita  {
 
     public int lanzar() {
         int apuesta = 0;
-
-
         int opcion = 0;
         if (this.turno % 2 == 0) {
 
             opcion = JOptionPane.showConfirmDialog(null,
                     jugadores.get(this.turno % 2).getNameJugador() + ", el pote actual es de " + this.pote
-                            + " �Deseas lanzar el apuesta ",
-                    "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                    ICONO);
+                            + " ¿Deseas lanzar la apuesta?", "Lanzamiento", JOptionPane.YES_NO_OPTION,
+                    JOptionPane.YES_NO_OPTION, ICONO);
             {
                 if (opcion == 0) {
 
@@ -111,54 +98,45 @@ public class AppGuayabita  {
                         JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador()
                                         + ". Con este dado no puedes apostar...\nPasa el turno",
-                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION,
-                                DADO1);
+                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION, DADO1);
                         this.turno++;
                     }
                     else if (this.dado == 2) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador() + " Este es tu dado\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO2);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO2);
                     } else if (this.dado == 3) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador() + ". Este es tu dado\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO3);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO3);
                     } else if (this.dado == 4) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador() + ". Este es tu dado\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO4);
-
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO4);
                     } else if (this.dado == 5) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador() + ". Este es tu dado\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO5);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO5);
                     } else if (this.dado == 6) {
                         JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador()
                                         + ". Con este dado no puedes apostar...\nPasa el turno",
-                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION,
-                                DADO6);
+                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION, DADO6);
                         this.turno++;
                     }
-                } else
-                    System.exit(1);
+                } else System.exit(1);
             }
         }
         if (this.turno % 2 == 1) {
 
             opcion = JOptionPane.showConfirmDialog(null,
                     jugadores.get(this.turno % 2).getNameJugador() + ", el pote actual es de " + this.pote
-                            + " �Deseas lanzar el apuesta ",
-                    "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                    ICONO);
+                            + " ¿Deseas lanzar el apuesta ",
+                    "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, ICONO);
             {
                 if (opcion == 0) {
                     this.dado = (int) (Math.random() * 6) + 1;
@@ -166,49 +144,39 @@ public class AppGuayabita  {
                         JOptionPane.showConfirmDialog(null,
                                 jugadores.get(1).getNameJugador()
                                         + ". Con este dado no puedes apostar...\nPasa el turno",
-                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION,
-                                DADO1);
+                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION, DADO1);
                         this.turno++;
                     }
                     else if (this.dado == 2) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(1).getNameJugador() + ". Este es tu dado\n\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO2);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO2);
                     } else if (this.dado == 3) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(1).getNameJugador() + ". Este es tu dado\n\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO3);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO3);
                     } else if (this.dado == 4) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(1).getNameJugador() + ". Este es tu dado\n\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO4);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO4);
                     } else if (this.dado == 5) {
                         apuesta = JOptionPane.showConfirmDialog(null,
                                 jugadores.get(1).getNameJugador() + ". Este es tu dado\n\n"
-                                        + "�Deseas hacer una apuesta?",
-                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION,
-                                DADO5);
+                                        + "¿Deseas hacer una apuesta?",
+                                "Lanzamiento", JOptionPane.YES_NO_OPTION, JOptionPane.YES_NO_OPTION, DADO5);
                     } else if (this.dado == 6) {
                         JOptionPane.showConfirmDialog(null,
                                 jugadores.get(0).getNameJugador()
                                         + ". Con este dado no puedes apostar...\nPasa el turno",
-                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION,
-                                DADO6);
+                                "Lanzamiento", JOptionPane.DEFAULT_OPTION, JOptionPane.NO_OPTION, DADO6);
                         this.turno++;
                     }
-
-                }
-                else
-                    System.exit(1);
+                } else System.exit(1);
             }
-        }
-        return apuesta;
+        }return apuesta;
     }
     public int segundoLanzar(int azar) {
         int restar = 0;
@@ -222,34 +190,27 @@ public class AppGuayabita  {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es menor o igua al anterior...\n Has perdido ",
-                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO1);
-
+                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO1);
                 } else if (this.dado == 2) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es menor o igual anterior...\n Has perdido ",
-                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO2);
-
+                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO2);
                 } else if (this.dado == 3) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es menor o igual anterior...\n Has perdido ",
-                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO3);
+                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO3);
                 } else if (this.dado == 4) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es menor o igual anterior...\n Has perdido ",
-                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO4);
+                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO4);
                 } else if (this.dado == 5) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es menor o igua al anterior...\n Has perdido ",
-                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO5);
+                            "Perder", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO5);
                 }
                 Restar(restar);
             }
@@ -258,26 +219,22 @@ public class AppGuayabita  {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es mayor al anterior...\n Has ganado ",
-                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO3);
+                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO3);
                 } else if (this.dado == 4) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es mayor al anterior...\n Has ganado ",
-                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO4);
+                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO4);
                 } else if (this.dado == 5) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es mayor al anterior...\n Has ganado ",
-                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO5);
+                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO5);
                 } else if (this.dado == 6) {
                     JOptionPane.showConfirmDialog(null,
                             jugadores.get(this.turno % 2).getNameJugador()
                                     + ". El dado que has sacado es mayor al anterior...\n Has ganado",
-                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION,
-                            DADO6);
+                            "Ganar", JOptionPane.DEFAULT_OPTION, JOptionPane.OK_OPTION, DADO6);
                 }
                 Sumar(restar);
             }
@@ -315,7 +272,6 @@ public class AppGuayabita  {
             this.turno++;
         }
         return restar;
-
     }
 
     public void Restar(int restar) {
@@ -325,8 +281,7 @@ public class AppGuayabita  {
         JOptionPane.showConfirmDialog(null,
                 jugadores.get(this.turno % 2).getNameJugador() + ". Tu dinero actual es "
                         + jugadores.get(this.turno % 2).getPoteJugador(),
-                "Ganacias", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
-                DINERO);
+                "Ganacias", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, DINERO);
         this.turno++;
     }
     public void Sumar(int sumar) {
@@ -336,8 +291,7 @@ public class AppGuayabita  {
         JOptionPane.showConfirmDialog(null,
                 jugadores.get(this.turno % 2).getNameJugador() + ". Tu dinero actual  es  "
                         + jugadores.get(this.turno % 2).getPoteJugador(),
-                "Ganacias", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
-                DINERO);
+                "Ganacias", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, DINERO);
         this.turno++;
     }
 }

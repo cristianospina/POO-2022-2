@@ -3,9 +3,8 @@ package com.cristian.desafio1.calculadora.dominio;
 import java.util.List;
 
 public class Calculadora {
-    // Método auxiliar para redondear el resultado de cada operación
     private static double redondear(boolean redondear, double resultado){
-        if (redondear) // Aplica el redondeo del resultado
+        if (redondear)
             return Math.round(resultado);
         else
             return resultado;
