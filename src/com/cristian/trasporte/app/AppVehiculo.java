@@ -11,12 +11,16 @@ public class AppVehiculo {
         List<Bicicleta> bicicletas = new ArrayList<>();
         List<Vehiculo> vehiculos = new ArrayList<>();
 
-        vehiculos.add(new BicicletaMTB());
-        vehiculos.add(new Bicicleta());
-        vehiculos.add(new BiciRuta());
-        vehiculos.add(new Vehiculo());
-        vehiculos.add(new Taxi());
+        Carro carro = new Carro(444,"BMW","WER789");
+        carro.acelerar();
 
-        vehiculos.forEach(System.out::println);
+
+        vehiculos.add(new BicicletaMTB(456,"GW"));
+        vehiculos.add(new Bicicleta(789,"SCOOT"));
+        vehiculos.add(new BiciRuta(369,"Trek"));
+        vehiculos.add(new Vehiculo(123,"Mazda"));
+        vehiculos.add(new Taxi(741,"Chevrolet","POI654"));
+
+        vehiculos.forEach(vehi -> vehi.acelerar());
     }
 }

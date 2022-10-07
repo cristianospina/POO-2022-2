@@ -4,6 +4,11 @@ public class Taxi extends Carro {
     private String empresa;
     private  int nroPasajeros;
 
+    public Taxi(long serial, String marca, String placa) {
+        super(serial, marca, placa);
+    }
+
+
     public String getEmpresa() {
         return empresa;
     }

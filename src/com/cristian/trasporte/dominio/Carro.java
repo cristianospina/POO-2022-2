@@ -1,8 +1,12 @@
 package com.cristian.trasporte.dominio;
 
 public class Carro extends Vehiculo{
-    private String placa;
-    private String tipoCaja;
+    protected String placa;
+    protected String tipoCaja;
+
+    public Carro(long serial, String marca, String placa) {
+        super(serial, marca);
+    }
 
     public String getPlaca() {
         return placa;
